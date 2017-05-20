@@ -1,0 +1,35 @@
+//These classes generate the same JS code
+class Person {
+    name: string;
+    age: number;
+    constructor (name: string, age: number){
+            this.name = name;
+            this.age = age;
+    }
+}
+
+class Person2 {
+    constructor (public name: string,
+        public age: number) {}
+}
+
+//public vs private
+class Person3 {
+    constructor (public name: string,
+        private age: number) {}
+}
+
+//optional parameters
+class Person4 {
+    constructor (public name: string,
+        private age?: number) {}
+}
+
+//default values
+class Person5 {
+    constructor (public name: string,
+        private age: number = 99) {}
+}
+
+let person3 = new Person3("mike", 20);
+let person4 = new Person4("mike");
