@@ -22,7 +22,7 @@ class Person3 {
 //optional parameters
 class Person4 {
     constructor (public name: string,
-        private age?: number) {}
+        public age?: number) {}
 }
 
 //default values
