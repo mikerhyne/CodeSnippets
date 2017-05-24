@@ -1,0 +1,25 @@
+<h1>Generics</h1>
+<code>
+  class List<T> {
+      _items: T[] = [];
+
+      add(item: T){
+          this._items.push(item);
+      }
+
+      getItems(): T[] {
+          return this._items;
+      }
+  }
+
+  function processData<T>(data: T) {
+      //Do work here
+  }
+
+  let listOfStrings = new List<string>();
+  let listOfNumbers = new List<number>();
+  let listOfBooleans = new List<boolean>();
+
+  processData(listOfStrings);
+  processData(listOfNumbers);
+</code>
